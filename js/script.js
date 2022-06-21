@@ -35,10 +35,10 @@ function salvaTarefa() {
 function postTarefa() {
     var minhaTarefa = new Array()
     let pegarElementos = document.getElementById('id-tarefa');
-    for(var i = 0; i <= localStorage.length; i++) {
+    for(var i = 0; i < localStorage.length; i++) {
         minhaTarefa.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
         let post = 
-        "<li class='texto-tarefa' id='" + minhaTarefa[i].id + "'><input type='checkbox' class='tarefa-concluida' id='" + minhaTarefa[i].id  + 
+        "<li class='texto-tarefa' id= '" + minhaTarefa[i].id + "'><input type='checkbox' class='tarefa-concluida' id= '" + minhaTarefa[i].id  + 
         "' onclick='(" + minhaTarefa[i].id  + ")'><div id = '" + minhaTarefa[i].prioridade + "'></div> " 
         + minhaTarefa[i].tarefa + " -  <span>Salvo em " + minhaTarefa[i].data + "</span> <hr></li>"
         pegarElementos.innerHTML = post
